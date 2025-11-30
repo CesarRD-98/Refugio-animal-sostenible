@@ -93,11 +93,11 @@ export function Contact() {
                         <div className="mt-4 space-y-2 text-sm">
                             <p className="inline-flex items-center gap-2 text-stone-700">
                                 <Mail className="h-4 w-4 text-rose-500" />
-                                <span>contacto@cra-refugio.org</span>
+                                <span className="mr-2">crahn@refugio.org</span>
                             </p>
                             <p className="inline-flex items-center gap-2 text-stone-700">
                                 <Phone className="h-4 w-4 text-amber-600" />
-                                <span>+504 0000-0000 (Ejemplo)</span>
+                                <span>+504 9999-8811</span>
                             </p>
                         </div>
                     </div>
