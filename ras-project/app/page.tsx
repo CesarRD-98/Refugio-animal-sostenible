@@ -13,9 +13,9 @@ export default function Home() {
       <TopBanner />
       <Header />
       <Hero />
-      <About />
       <AnimalsSection />
       <Help />
+      <About />
       <Contact />
       <Footer />
     </main>

@@ -7,7 +7,7 @@ import { PawPrint, Heart } from "lucide-react";
 
 export function Header() {
     return (
-        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
+        <header className="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-stone-200">
             <Container className="flex h-16 items-center justify-between">
                 {/* Logo */}
                 <Link href="#inicio" className="flex items-center gap-2">
@@ -24,14 +24,14 @@ export function Header() {
 
                 {/* Navegación */}
                 <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-stone-700">
-                    <Link href="#sobre-nosotros" className="hover:text-orange-700 transition">
-                        Quiénes somos
-                    </Link>
                     <Link href="#animales" className="hover:text-orange-700 transition">
                         Animales
                     </Link>
                     <Link href="#como-ayudar" className="hover:text-orange-700 transition">
                         Cómo ayudar
+                    </Link>
+                    <Link href="#sobre-nosotros" className="hover:text-orange-700 transition">
+                        Quiénes somos
                     </Link>
                     <Link href="#contacto" className="hover:text-orange-700 transition">
                         Contacto
