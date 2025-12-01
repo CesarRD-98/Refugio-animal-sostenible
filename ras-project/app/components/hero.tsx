@@ -10,13 +10,18 @@ import { motion } from "framer-motion";
 export function Hero() {
     return (
         <section
-            className="relative bg-stone-900"
-            style={{
-                backgroundImage: "url('/hero-banner.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
+            className="relative bg-stone-900 overflow-hidden"
         >
+            {/* Fondo como imagen optimizada con Next */}
+            <Image
+                src="/hero-banner.webp"
+                alt="Refugio CRA - Centro de Refugio Animal"
+                fill
+                priority
+                className="object-cover"
+                aria-hidden="true"
+            />
+
             {/* Overlay oscuro para legibilidad */}
             <div className="absolute inset-0 bg-stone-900/60" />
 

@@ -1,7 +1,7 @@
 // app/components/Animals/AnimalsSection.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Section } from "./layout/Section";
 import { AnimalCard, Animal } from "./animalsCard";
@@ -205,6 +205,18 @@ export function AnimalsSection() {
     const getYesNo = (value?: boolean) =>
         value === undefined ? "No especificado" : value ? "Sí" : "No";
 
+    useEffect(() => {
+        if (selectedAnimal) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        }
+    }, [selectedAnimal])
+
     return (
         <Section
             id="animales"
@@ -229,7 +241,7 @@ export function AnimalsSection() {
                     <button
                         type="button"
                         onClick={() => setShowAll((prev) => !prev)}
-                        className="text-xs sm:text-sm font-semibold text-orange-700 hover:text-orange-600"
+                        className="text-xs sm:text-sm font-semibold text-orange-700 hover:text-orange-600 cursor-pointer"
                     >
                         {showAll ? "Mostrar menos animales" : "Ver más animales"}
                     </button>
@@ -243,7 +255,7 @@ export function AnimalsSection() {
                         }`}
                 >
                     <div
-                        className={`w-full max-w-2xl rounded-3xl bg-white border border-stone-200 shadow-xl overflow-hidden transform transition-all duration-200 ${isClosing || !isVisible
+                        className={`w-full max-w-2xl max-h-[90vh] rounded-3xl bg-white border border-stone-200 shadow-xl overflow-y-auto transform transition-all duration-200 ${isClosing || !isVisible
                             ? "opacity-0 scale-95 translate-y-2"
                             : "opacity-100 scale-100 translate-y-0"
                             }`}
@@ -276,7 +288,7 @@ export function AnimalsSection() {
                         {/* Contenido principal: imagen + ficha */}
                         <div className="grid md:grid-cols-[1.1fr,1fr] gap-0">
                             {/* Imagen grande */}
-                            <div className="relative h-44 sm:h-56 md:h-full">
+                            <div className="relative h-44 sm:h-56 md:h-64 lg:h-72 xl:h-80 2xl:h-96">
                                 <Image
                                     src={selectedAnimal.imageUrl}
                                     alt={selectedAnimal.name}
