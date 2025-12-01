@@ -15,7 +15,7 @@ export function Header() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl text-white">
                         <Image
                             src="/logo-cra.png"
-                            alt="Logo Centro de Refugio Animal"
+                            alt="Logo Centro de Rescate Animal"
                             width={1024}
                             height={1024}
                             priority
@@ -25,7 +25,7 @@ export function Header() {
                     <div className="leading-tight">
                         <p className="text-sm font-bold text-stone-900">CRA</p>
                         <p className="text-[11px] text-stone-500 -mt-1">
-                            Centro de Refugio Animal
+                            Centro de Rescate Animal
                         </p>
                     </div>
                 </Link>

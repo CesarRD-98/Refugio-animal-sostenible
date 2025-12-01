@@ -17,7 +17,7 @@ export function About() {
       id="sobre-nosotros"
       eyebrow="¿Quiénes somos?"
       title="Un refugio temporal con impacto sostenible."
-      description="CRA – Centro de Refugio Animal combina rescate, adopción responsable y participación comunitaria para darle una segunda oportunidad a perros y gatos en situación de calle."
+      description="CRA – Centro de Rescate Animal combina rescate, adopción responsable y participación comunitaria para darle una segunda oportunidad a perros y gatos en situación de calle."
       className="bg-white"
     >
       <div className="grid gap-10 lg:grid-cols-[1.05fr,1fr] items-start">

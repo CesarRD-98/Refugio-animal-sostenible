@@ -15,7 +15,7 @@ export function Hero() {
             {/* Fondo como imagen optimizada con Next */}
             <Image
                 src="/hero-banner.webp"
-                alt="Refugio CRA - Centro de Refugio Animal"
+                alt="Refugio CRA - Centro de Rescate Animal"
                 fill
                 priority
                 className="object-cover"
@@ -37,7 +37,7 @@ export function Hero() {
                     >
                         <div className="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800 mb-4">
                             <PawPrint className="h-4 w-4" />
-                            <span>CRA – Centro de Refugio Animal</span>
+                            <span>CRA – Centro de Rescate Animal</span>
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
