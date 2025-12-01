@@ -11,6 +11,13 @@ export interface Animal {
     status: "En adopción" | "En recuperación";
     type: "Perro" | "Gato";
     imageUrl: string;
+
+    // Datos extra para el modal
+    sex?: "Macho" | "Hembra";
+    vaccines?: string;    
+    sterilized?: boolean;
+    dewormed?: boolean;    
+    temperament?: string;
 }
 
 interface AnimalCardProps {
@@ -60,15 +67,11 @@ export function AnimalCard({ animal, onDetailsClick }: AnimalCardProps) {
                     <PawPrint className="h-4 w-4 text-amber-600" />
                 </div>
 
-                <p className="mt-2 text-xs sm:text-sm text-stone-600 line-clamp-3">
-                    {animal.description}
-                </p>
-
                 <div className="mt-4 flex items-center justify-between">
                     <button
                         type="button"
                         onClick={() => onDetailsClick(animal)}
-                        className="text-xs font-semibold text-orange-700 hover:text-orange-600"
+                        className="text-xs font-semibold text-orange-700 hover:text-orange-600 cursor-pointer"
                     >
                         Ver detalles
                     </button>

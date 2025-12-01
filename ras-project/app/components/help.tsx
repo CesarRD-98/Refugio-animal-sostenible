@@ -30,13 +30,13 @@ export function Help() {
             eyebrow="Cómo puedes ayudar"
             title="Pequeñas acciones que marcan una gran diferencia"
             description="El prototipo plantea diferentes formas en las que una persona puede involucrarse con el refugio: adopciones, donaciones y voluntariado."
-            className="bg-white"
+            className="bg-stone-100"
         >
             <div className="grid gap-6 md:grid-cols-3">
                 {ways.map(({ icon: Icon, title, description }) => (
                     <div
                         key={title}
-                        className="flex flex-col rounded-2xl border border-stone-200 bg-stone-100 p-4"
+                        className="flex flex-col rounded-2xl border border-stone-200 bg-white p-4 shadow-sm"
                     >
                         <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-rose-400/10">
                             <Icon className="h-5 w-5 text-rose-500" />

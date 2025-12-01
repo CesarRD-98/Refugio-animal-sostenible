@@ -2,8 +2,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "./layout/Container";
-import { PawPrint, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export function Header() {
     return (
@@ -11,8 +12,15 @@ export function Header() {
             <Container className="flex h-16 items-center justify-between">
                 {/* Logo */}
                 <Link href="#inicio" className="flex items-center gap-2">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-700 text-white">
-                        <PawPrint className="h-5 w-5" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl text-white">
+                        <Image
+                            src="/logo-cra.png"
+                            alt="Logo Centro de Refugio Animal"
+                            width={1024}
+                            height={1024}
+                            priority
+                            className="h-10 w-auto object-contain"
+                        />
                     </div>
                     <div className="leading-tight">
                         <p className="text-sm font-bold text-stone-900">CRA</p>
