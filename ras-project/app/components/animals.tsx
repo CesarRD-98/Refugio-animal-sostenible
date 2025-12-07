@@ -7,8 +7,9 @@ import { Section } from "./layout/Section";
 import { AnimalCard, Animal } from "./animalsCard";
 import { X, Info, PawPrint, Syringe, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import { slugify } from "../utils/slugify";
 
-const mockAnimals: Animal[] = [
+export const mockAnimals: Animal[] = [
     {
         id: 1,
         name: "Luna",
@@ -169,7 +170,6 @@ const mockAnimals: Animal[] = [
         dewormed: true,
         temperament: "Dulce y tranquila",
     },
-
 ];
 
 export function AnimalsSection() {
@@ -190,7 +190,6 @@ export function AnimalsSection() {
         }, 10);
     };
 
-
     const handleCloseModal = () => {
         setIsClosing(true);
         setIsVisible(false);
@@ -198,9 +197,8 @@ export function AnimalsSection() {
         setTimeout(() => {
             setSelectedAnimal(null);
             setIsClosing(false);
-        }, 200); // misma duración que transition
+        }, 200);
     };
-
 
     const getYesNo = (value?: boolean) =>
         value === undefined ? "No especificado" : value ? "Sí" : "No";
@@ -214,15 +212,15 @@ export function AnimalsSection() {
 
         return () => {
             document.body.style.overflow = "auto";
-        }
-    }, [selectedAnimal])
+        };
+    }, [selectedAnimal]);
 
     return (
         <Section
             id="animales"
-            eyebrow="Animales en adopción"
-            title="Conoce algunos de nuestros peluditos"
-            description="Esta sección muestra un ejemplo de cómo se podrían presentar los animales disponibles en el refugio, con un vistazo rápido y una ficha más completa para quienes estén interesados en adoptar."
+            eyebrow="Mascotas en adopción"
+            title="Conoce a algunos de nuestros peluditos"
+            description="Aquí puedes conocer a algunos de los perros y gatos que actualmente están buscando un hogar. Revisa su ficha para ver información de salud, temperamento y lo que necesitan para adaptarse a tu familia."
             className="bg-white"
         >
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -255,13 +253,13 @@ export function AnimalsSection() {
                         }`}
                 >
                     <div
-                        className={`w-full max-w-2xl max-h-[90vh] rounded-3xl bg-white border border-stone-200 shadow-xl overflow-y-auto transform transition-all duration-200 ${isClosing || !isVisible
+                        className={`w-full max-w-2xl max-h-[80vh] md:max-h-[90vh] rounded-3xl bg-white border border-stone-200 shadow-xl overflow-y-auto transform transition-all duration-200 ${isClosing || !isVisible
                             ? "opacity-0 scale-95 translate-y-2"
                             : "opacity-100 scale-100 translate-y-0"
                             }`}
                     >
                         {/* Header */}
-                        <div className="flex items-start justify-between px-5 pt-4 pb-3 border-b border-stone-200">
+                        <div className="sticky top-0 z-20 flex items-start justify-between px-5 pt-4 pb-3 bg-white/90 backdrop-blur border-b border-stone-200">
                             <div>
                                 <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-600">
                                     Ficha de adopción
@@ -278,7 +276,7 @@ export function AnimalsSection() {
                             <button
                                 type="button"
                                 onClick={handleCloseModal}
-                                className="rounded-full p-1 hover:bg-stone-100 transition"
+                                className="rounded-full p-2 hover:bg-stone-100 transition"
                                 aria-label="Cerrar"
                             >
                                 <X className="h-4 w-4 text-stone-500" />
@@ -370,10 +368,10 @@ export function AnimalsSection() {
                                     <div className="rounded-xl bg-stone-50 border border-stone-200 px-3 py-2 flex items-start gap-2">
                                         <Info className="h-4 w-4 mt-0.5 text-amber-600" />
                                         <p>
-                                            Esta es una simulación de cómo se vería la ficha de un
-                                            animal en adopción. En una plataforma real, aquí podrías
-                                            encontrar información validada por el refugio sobre salud,
-                                            comportamiento y requisitos para la adopción.
+                                            La información de esta ficha te ayuda a conocer mejor la
+                                            historia, cuidados básicos y necesidades del peludito,
+                                            para que puedas valorar si se adapta a tu hogar y estilo
+                                            de vida.
                                         </p>
                                     </div>
                                 </div>
@@ -381,15 +379,16 @@ export function AnimalsSection() {
                                 {/* CTA */}
                                 <div className="pt-1 flex flex-col gap-2">
                                     <Link
-                                        href="#contacto"
+                                        href={`/adoptar/${selectedAnimal.id}-${slugify(selectedAnimal.name)}`}
                                         onClick={handleCloseModal}
                                         className="inline-flex items-center justify-center rounded-full bg-orange-700 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-orange-600 transition"
                                     >
-                                        Estoy interesado en adoptar a {selectedAnimal.name}
+                                        Quiero adoptar a {selectedAnimal.name}
                                     </Link>
                                     <p className="text-[10px] text-stone-500">
-                                        Al hacer clic, serás dirigido al formulario de contacto
-                                        para simular el siguiente paso del proceso de adopción.
+                                        Al hacer clic, podrás completar un formulario de adopción
+                                        para iniciar el proceso y contarnos más sobre tu hogar y tus
+                                        expectativas.
                                     </p>
                                 </div>
                             </div>

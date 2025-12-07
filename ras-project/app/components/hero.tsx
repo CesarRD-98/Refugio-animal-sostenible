@@ -9,9 +9,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
     return (
-        <section
-            className="relative bg-stone-900 overflow-hidden"
-        >
+        <section className="relative bg-stone-900 overflow-hidden">
             {/* Fondo como imagen optimizada con Next */}
             <Image
                 src="/hero-banner.webp"
@@ -25,7 +23,7 @@ export function Hero() {
             {/* Overlay oscuro para legibilidad */}
             <div className="absolute inset-0 bg-stone-900/60" />
 
-            <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
+            <Container className="relative z-10 py-8 sm:py-12 lg:py-16">
                 {/* Contenido principal: texto + mock */}
                 <div className="flex flex-col lg:flex-row items-center gap-10">
                     {/* Texto */}
@@ -40,40 +38,45 @@ export function Hero() {
                             <span>CRA – Centro de Rescate Animal</span>
                         </div>
 
+                        {/* Propuesta de valor */}
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                            Démosles una{" "}
-                            <span className="text-orange-400">segunda oportunidad</span>{" "}
-                            a los peluditos que más lo necesitan.
+                            Adopciones{" "}
+                            <span className="text-orange-400">responsables</span>{" "} y {" "}
+                            <span className="text-orange-400">transparentes</span>{" "}
+                            con el acompañamiento que necesitas.
                         </h1>
 
-                        <p className="mt-4 text-sm sm:text-base text-stone-200 max-w-xl">
+                        {/* Descripción corta del refugio */}
+                        <p className="mt-4 text-sm md:text-base text-stone-200 max-w-xl">
                             En CRA rescatamos, cuidamos y acompañamos a perros y gatos en
-                            situación de abandono mientras encuentran un hogar lleno de amor.
-                            Este prototipo muestra cómo podemos conectar a más personas con
-                            la causa.
+                            situación de abandono, buscando que cada adopción sea
+                            responsable, transparente y con el apoyo básico que necesitas
+                            para dar el siguiente paso.
                         </p>
 
+                        {/* CTAs principales */}
                         <div className="mt-6 flex flex-wrap gap-3">
                             <Link
                                 href="#animales"
-                                className="inline-flex items-center justify-center rounded-full bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 transition"
+                                className="inline-flex items-center justify-center rounded-full bg-orange-700 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 transition"
                             >
-                                Ver animales en adopción
+                                Quiero adoptar
                             </Link>
 
-                            <Link
+                            <Link   
                                 href="#como-ayudar"
-                                className="inline-flex items-center justify-center rounded-full border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-900 hover:bg-stone-100 transition"
+                                className="inline-flex items-center justify-center rounded-full border border-stone-200/60 bg-white px-6 py-2.5 text-sm font-semibold  hover:bg-white/90 transition"
                             >
-                                <HeartHandshake className="h-4 w-4 mr-2 text-rose-500" />
-                                Cómo puedes ayudar
+                                <HeartHandshake className="h-4 w-4 mr-2 text-rose-400" />
+                                Quiero ayudar
                             </Link>
                         </div>
 
+                        {/* Sellito de confianza */}
                         <div className="mt-6 flex flex-wrap items-center gap-3 text-xs text-stone-200">
                             <span className="inline-flex items-center gap-2">
                                 <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
-                                Prototipo académico de Design Thinking
+                                Compromiso con la adopción responsable y el bienestar animal.
                             </span>
                         </div>
                     </motion.div>
@@ -94,15 +97,16 @@ export function Hero() {
                                     <p className="mt-1 text-lg font-bold text-stone-900">
                                         +100 peluditos rescatados
                                     </p>
-                                    <p className="mt-1 text-xs text-stone-600">
-                                        Cifra demostrativa para el prototipo.
+                                    <p className="mt-1 text-xs text-stone-600 max-w-2xs lg:max-w-2xs ">
+                                        Cuidando y buscando hogar para perros y gatos en
+                                        situación de abandono.
                                     </p>
                                 </div>
                                 <div className="flex flex-col items-end gap-2">
-                                    <span className="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800">
+                                    <span className="text-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800">
                                         🐶 🐱 Lista de adopción
                                     </span>
-                                    <span className="inline-flex items-center gap-2 rounded-full bg-rose-400/10 px-3 py-1 text-xs font-medium text-rose-500">
+                                    <span className="text-center gap-2 rounded-full bg-rose-400/10 px-3 py-1 text-xs font-medium text-rose-500">
                                         ❤ Cambia una vida hoy
                                     </span>
                                 </div>
@@ -136,9 +140,9 @@ export function Hero() {
                             </div>
 
                             <p className="mt-4 text-[11px] text-stone-500">
-                                *Las imágenes son representativas del refugio. En una versión
-                                completa se mostrarían fotografías reales de los animales
-                                disponibles para adopción.
+                                *Las imágenes muestran algunos de los animales que representan
+                                el trabajo del refugio y nuestro compromiso con la adopción
+                                responsable.
                             </p>
                         </div>
                     </motion.div>
