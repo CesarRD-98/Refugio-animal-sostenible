@@ -7,7 +7,7 @@ import { Section } from "./layout/Section";
 import { AnimalCard, Animal } from "./animalsCard";
 import { X, Info, PawPrint, Syringe, ShieldCheck } from "lucide-react";
 import Image from "next/image";
-import { slugify } from "../utils/slugify";
+import { slugify } from "../lib/slugify";
 
 export const mockAnimals: Animal[] = [
     {
@@ -217,7 +217,7 @@ export function AnimalsSection() {
 
     return (
         <Section
-            id="animales"
+            id="mascotas"
             eyebrow="Mascotas en adopción"
             title="Conoce a algunos de nuestros peluditos"
             description="Aquí puedes conocer a algunos de los perros y gatos que actualmente están buscando un hogar. Revisa su ficha para ver información de salud, temperamento y lo que necesitan para adaptarse a tu familia."

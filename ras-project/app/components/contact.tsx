@@ -69,7 +69,7 @@ export function Contact() {
         event.preventDefault();
         if (!validate()) return;
 
-        // Simulamos envío al backend
+        // Simulación de envío
         setIsSubmitting(true);
 
         setTimeout(() => {
@@ -93,16 +93,15 @@ export function Contact() {
         setTimeout(() => {
             setShowSuccess(false);
             setIsClosingSuccess(false);
-        }, 200); // misma duración que las clases de transition
+        }, 200);
     };
-
 
     return (
         <Section
             id="contacto"
             eyebrow="Contacto"
-            title="¿Te gustaría adoptar, apoyar o proponer una mejora?"
-            description="Este formulario forma parte del prototipo. Imagina que aquí se reciben solicitudes de adopción, donaciones o voluntariado para el refugio."
+            title="¿Tienes alguna consulta, propuesta o comentario?"
+            description="Si tienes dudas sobre el proceso de adopción, quieres conocer mejor cómo funciona el refugio o deseas proponer una idea, puedes escribirnos por aquí. Para iniciar una adopción, donación, padrinazgo o voluntariado, utiliza los formularios específicos de cada sección."
             className="bg-stone-100"
         >
             <div className="grid gap-8 lg:grid-cols-2 items-start">
@@ -114,14 +113,13 @@ export function Contact() {
                     <div className="inline-flex items-center gap-2 rounded-full bg-stone-100 px-3 py-1 mb-1">
                         <span className="h-1.5 w-1.5 rounded-full bg-orange-600" />
                         <span className="text-[11px] font-medium uppercase tracking-wide text-stone-600">
-                            Formulario de ejemplo
+                            Formulario de contacto general
                         </span>
                     </div>
 
                     <p className="text-[11px] sm:text-xs text-stone-600 mb-2">
-                        Si llegaste aquí desde la ficha de un animal en adopción, selecciona{" "}
-                        <span className="font-semibold text-stone-800">“Adopción”</span> y
-                        escribe el nombre del animal en el mensaje o en el campo dedicado.
+                        Si tu consulta está relacionada con un peludito en particular, puedes
+                        escribir su nombre en el campo correspondiente o mencionarlo en el mensaje.
                     </p>
 
                     {/* Nombre */}
@@ -137,9 +135,7 @@ export function Contact() {
                             onChange={(e) => handleChange("name", e.target.value)}
                         />
                         {errors.name && (
-                            <p className="mt-1 text-[11px] text-red-500">
-                                {errors.name}
-                            </p>
+                            <p className="mt-1 text-[11px] text-red-500">{errors.name}</p>
                         )}
                     </div>
 
@@ -156,9 +152,7 @@ export function Contact() {
                             onChange={(e) => handleChange("email", e.target.value)}
                         />
                         {errors.email && (
-                            <p className="mt-1 text-[11px] text-red-500">
-                                {errors.email}
-                            </p>
+                            <p className="mt-1 text-[11px] text-red-500">{errors.email}</p>
                         )}
                     </div>
 
@@ -175,15 +169,13 @@ export function Contact() {
                             <option value="" disabled>
                                 Selecciona una opción
                             </option>
-                            <option>Adopción</option>
-                            <option>Donación</option>
-                            <option>Voluntariado</option>
-                            <option>Otra consulta</option>
+                            <option>Consulta sobre adopción</option>
+                            <option>Consulta sobre donaciones o padrinazgo</option>
+                            <option>Consulta sobre voluntariado</option>
+                            <option>Otra consulta o comentario</option>
                         </select>
                         {errors.reason && (
-                            <p className="mt-1 text-[11px] text-red-500">
-                                {errors.reason}
-                            </p>
+                            <p className="mt-1 text-[11px] text-red-500">{errors.reason}</p>
                         )}
                     </div>
 
@@ -209,7 +201,7 @@ export function Contact() {
                         <textarea
                             className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             rows={4}
-                            placeholder="Cuéntanos brevemente tu idea, consulta o interés de adopción."
+                            placeholder="Cuéntanos brevemente tu consulta, comentario o propuesta."
                             value={form.message}
                             onChange={(e) => handleChange("message", e.target.value)}
                         />
@@ -236,9 +228,9 @@ export function Contact() {
                     </button>
 
                     <p className="text-[11px] text-stone-500">
-                        *En esta versión académica el formulario no envía información real.
-                        En una implementación completa se podría conectar a un servicio de
-                        correo o a una API de gestión de solicitudes.
+                        *En esta versión las solicitudes se manejan de forma demostrativa. En una
+                        implementación completa se conectaría a un servicio de correo o a una API
+                        de gestión de solicitudes.
                     </p>
                 </form>
 
@@ -246,30 +238,27 @@ export function Contact() {
                 <div className="space-y-4 text-sm text-stone-600">
                     <div className="rounded-2xl border border-stone-200 bg-white p-4">
                         <h3 className="text-sm font-semibold text-stone-900">
-                            Datos de contacto de ejemplo
+                            Datos de contacto
                         </h3>
                         <p className="mt-2 text-xs sm:text-sm text-stone-600">
-                            Aquí se podrían mostrar los datos reales del refugio:
-                            ubicación, horarios de visita y medios de comunicación.
+                            Aquí se pueden mostrar los datos de contacto del refugio para
+                            consultas rápidas.
                         </p>
 
-                        <div className="mt-4 space-y-2 text-sm">
+                        <div className="flex gap-2 mt-4 text-sm">
                             <p className="inline-flex items-center gap-2 text-stone-700">
                                 <Mail className="h-4 w-4 text-rose-500" />
-                                <span className="mr-2">crahn@refugio.org</span>
+                                <span>crahn@refugio.org</span>
                             </p>
                             <p className="inline-flex items-center gap-2 text-stone-700">
                                 <Phone className="h-4 w-4 text-amber-600" />
                                 <span>+504 9999-8811</span>
                             </p>
                         </div>
-                    </div>
 
-                    <div className="rounded-2xl border border-dashed border-stone-200 bg-stone-50 p-4">
-                        <p className="text-xs sm:text-sm text-stone-600">
-                            Como parte del prototipo de Design Thinking, esta sección puede
-                            usarse para validar qué información consideran más útil las
-                            personas interesadas en adoptar, donar o ser voluntarias.
+                        <p className="mt-3 text-[11px] text-stone-500">
+                            Los datos mostrados son demostrativos. En una implementación real se
+                            sustituirían por la información oficial del CRA.
                         </p>
                     </div>
                 </div>
@@ -294,10 +283,10 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="text-sm sm:text-base font-semibold text-stone-900">
-                                        Solicitud enviada
+                                        Mensaje enviado
                                     </h3>
                                     <p className="text-[11px] sm:text-xs text-stone-500">
-                                        Tu mensaje se ha registrado dentro de este prototipo.
+                                        Tu mensaje se ha registrado correctamente.
                                     </p>
                                 </div>
                             </div>
@@ -312,9 +301,9 @@ export function Contact() {
                         </div>
 
                         <p className="mt-4 text-xs sm:text-sm text-stone-600">
-                            En un sitio real, el equipo del refugio revisaría tu solicitud y
+                            En una versión conectada, el equipo del refugio revisaría tu mensaje y
                             se pondría en contacto contigo por correo o teléfono para dar
-                            seguimiento al proceso.
+                            seguimiento.
                         </p>
 
                         <div className="mt-4 flex justify-end">
@@ -329,7 +318,6 @@ export function Contact() {
                     </div>
                 </div>
             )}
-
         </Section>
     );
 }

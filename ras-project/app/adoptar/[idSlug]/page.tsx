@@ -45,7 +45,7 @@ export default function AdoptarPage() {
                         No encontramos a este peludito.
                     </p>
                     <Link
-                        href="/#animales"
+                        href="/#mascotas"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-orange-700 hover:text-orange-600"
                     >
                         <ArrowLeft className="h-4 w-4" />
@@ -490,7 +490,7 @@ export default function AdoptarPage() {
                                     Seguir en esta página
                                 </button>
                                 <Link
-                                    href="/#animales"
+                                    href="/#mascotas"
                                     className="inline-flex items-center justify-center rounded-full bg-orange-700 px-4 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-orange-600"
                                 >
                                     <PawPrint className="h-4 w-4 mr-1.5" />
