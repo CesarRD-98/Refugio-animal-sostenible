@@ -85,7 +85,7 @@ export default function VoluntariadoPage() {
                 <div className="mb-4">
                     <Link
                         href="/#como-ayudar"
-                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-stone-500 hover:text-stone-800"
+                        className="inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-stone-800"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         <span>Volver a formas de apoyar</span>
@@ -110,11 +110,11 @@ export default function VoluntariadoPage() {
                         </div>
 
                         <div className="rounded-2xl bg-white border border-stone-200 p-4 space-y-2">
-                            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
+                            <p className="text-sm font-semibold uppercase tracking-normal text-stone-500 flex items-center gap-1.5">
                                 <ShieldCheck className="h-3.5 w-3.5 text-amber-600" />
                                 ¿Qué hacemos con esta información?
                             </p>
-                            <p className="text-xs sm:text-sm text-stone-700">
+                            <p className="text-sm text-stone-700">
                                 La usamos para organizar grupos de voluntarios, asignar tareas
                                 acordes a tu disponibilidad y mantener una comunicación clara
                                 antes de cada jornada.

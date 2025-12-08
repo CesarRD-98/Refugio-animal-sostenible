@@ -40,7 +40,7 @@ export function Help() {
             eyebrow="Formas de apoyar"
             title="Hay muchas formas de cambiar una vida"
             description="Puedes sumarte a la labor del CRA adoptando, apadrinando, haciendo un aporte o dedicando un poco de tu tiempo. Cada gesto ayuda a que más peluditos estén a salvo."
-            className="bg-stone-100"
+            className="bg-stone-50"
         >
             <div className="grid gap-6 md:grid-cols-3">
                 {ways.map(({ icon: Icon, title, description, cta, href, badge }) => (
@@ -52,15 +52,15 @@ export function Help() {
                             <Icon className="h-5 w-5 text-amber-700" />
                         </div>
 
-                        <span className="mt-3 inline-flex items-center rounded-full bg-stone-100 border border-stone-300 px-2.5 py-0.5 text-[11px] font-medium text-stone-700">
+                        <span className="mt-3 inline-flex items-center rounded-full bg-stone-100 border border-stone-300 px-2.5 py-0.5 text-sm font-medium text-stone-500">
                             {badge}
                         </span>
 
-                        <h3 className="mt-3 text-sm font-semibold text-stone-900">
+                        <h3 className="mt-3 text-base font-semibold text-stone-900">
                             {title}
                         </h3>
 
-                        <p className="mt-2 text-xs sm:text-sm text-stone-600 flex-1">
+                        <p className="mt-2 text-sm text-stone-600 flex-1">
                             {description}
                         </p>
 

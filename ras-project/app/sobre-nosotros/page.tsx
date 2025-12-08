@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import { ScrollToTop } from "../components/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Sobre nosotros | CRA – Centro de Rescate Animal",
@@ -96,7 +97,7 @@ export default function SobreNosotrosPage() {
                     ].map((label) => (
                       <span
                         key={label}
-                        className="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-[11px] font-medium text-stone-700"
+                        className="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-xs font-medium text-stone-700"
                       >
                         {label}
                       </span>
@@ -111,15 +112,15 @@ export default function SobreNosotrosPage() {
               <div className="rounded-3xl border border-emerald-100 bg-emerald-50/80 p-5 sm:p-6 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <PawPrint className="h-5 w-5 text-emerald-700" />
-                  <h3 className="text-sm sm:text-base font-semibold text-stone-900">
+                  <h3 className="text-base font-semibold text-stone-900">
                     Lo que nos mueve
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 mb-3">
+                <p className="text-sm text-stone-700 mb-3">
                   Trabajamos para que ningún peludito vuelva a sentirse solo,
                   combinando rescate, bienestar integral y adopciones cuidadas.
                 </p>
-                <ul className="space-y-2 text-xs sm:text-sm text-stone-700">
+                <ul className="space-y-2 text-sm text-stone-700">
                   <li className="flex gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
                     <span>Rescate y atención básica de perros y gatos.</span>
@@ -141,7 +142,7 @@ export default function SobreNosotrosPage() {
                 </ul>
               </div>
 
-              <div className="rounded-3xl border border-stone-200 bg-white/80 p-4 sm:p-5 text-xs sm:text-sm text-stone-600">
+              <div className="rounded-3xl border border-stone-200 bg-white/80 p-4 sm:p-5 text-sm text-stone-600">
                 <div className="flex gap-2">
                   <ShieldCheck className="h-5 w-5 text-emerald-700 flex-shrink-0 mt-0.5" />
                   <p>
@@ -176,7 +177,7 @@ export default function SobreNosotrosPage() {
                   Ofrecemos un modelo de adopción donde el bienestar del animal
                   y la tranquilidad de la familia adoptante van de la mano.
                 </p>
-                <ul className="space-y-2 text-xs sm:text-sm text-stone-700">
+                <ul className="space-y-2 text-sm text-stone-700">
                   <li className="flex gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-rose-500" />
                     <span>
@@ -213,10 +214,10 @@ export default function SobreNosotrosPage() {
 
             {/* CÓMO TRABAJAMOS (RESUMIDO) */}
             <div className="rounded-3xl border border-stone-200 bg-white p-5 sm:p-6 shadow-sm">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-stone-500 mb-3">
+              <p className="text-sm font-semibold uppercase tracking-wide text-stone-500 mb-3">
                 Cómo trabajamos
               </p>
-              <div className="space-y-3 text-xs sm:text-sm text-stone-700">
+              <div className="space-y-3 text-sm text-stone-700">
                 <p>
                   Cada caso inicia con la identificación de un animal en
                   riesgo. Luego se le brinda atención básica, valoración y se
@@ -250,15 +251,15 @@ export default function SobreNosotrosPage() {
                     <HeartHandshake className="h-5 w-5 text-rose-600" />
                   </div>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wide text-rose-600">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-rose-600">
                       Misión
                     </p>
-                    <h3 className="text-sm sm:text-base font-semibold text-stone-900">
+                    <h3 className="text-sm font-semibold text-stone-900">
                       Un refugio seguro para nuevos comienzos.
                     </h3>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700">
+                <p className="text-sm text-stone-700">
                   Brindar un <strong>espacio seguro</strong> a los animales en
                   situación de calle, garantizando su bienestar, atención básica
                   y promoviendo la{" "}
@@ -274,15 +275,15 @@ export default function SobreNosotrosPage() {
                     <Target className="h-5 w-5 text-amber-600" />
                   </div>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-600">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-amber-600">
                       Visión
                     </p>
-                    <h3 className="text-sm sm:text-base font-semibold text-stone-900">
+                    <h3 className="text-sm font-semibold text-stone-900">
                       Un referente en protección y empatía.
                     </h3>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700">
+                <p className="text-sm text-stone-700">
                   Ser una <strong>institución referente</strong> a nivel
                   nacional en el rescate y protección animal, promoviendo una{" "}
                   <strong>comunidad consciente, empática</strong> y comprometida
@@ -299,10 +300,10 @@ export default function SobreNosotrosPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                       Valores
                     </p>
-                    <h3 className="text-sm sm:text-base font-semibold text-stone-900">
+                    <h3 className="text-sm font-semibold text-stone-900">
                       Principios que nos sostienen.
                     </h3>
                   </div>
@@ -310,7 +311,7 @@ export default function SobreNosotrosPage() {
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm text-stone-700">
+              <p className="text-sm text-stone-700">
                 Cada decisión en CRA se inspira en principios que buscan
                 equilibrio entre <strong>bienestar animal</strong>, comunidad y
                 sostenibilidad.
@@ -320,14 +321,14 @@ export default function SobreNosotrosPage() {
                 {valores.map((value) => (
                   <span
                     key={value}
-                    className="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-[11px] sm:text-xs font-medium text-stone-700"
+                    className="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-sm font-medium text-stone-600"
                   >
                     {value}
                   </span>
                 ))}
               </div>
 
-              <p className="mt-3 text-[11px] sm:text-xs text-stone-500">
+              <p className="mt-3 text-xs text-stone-500">
                 Promoviendo el <strong>bienestar</strong>, comunidades{" "}
                 <strong>sostenibles</strong> y un{" "}
                 <strong>uso responsable de los recursos</strong>.
@@ -337,6 +338,7 @@ export default function SobreNosotrosPage() {
         </Section>
       </main>
 
+      <ScrollToTop />
       <Footer />
     </div>
   );

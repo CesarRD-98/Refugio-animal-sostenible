@@ -102,7 +102,7 @@ export function Contact() {
             eyebrow="Contacto"
             title="¿Tienes alguna consulta, propuesta o comentario?"
             description="Si tienes dudas sobre el proceso de adopción, quieres conocer mejor cómo funciona el refugio o deseas proponer una idea, puedes escribirnos por aquí. Para iniciar una adopción, donación, padrinazgo o voluntariado, utiliza los formularios específicos de cada sección."
-            className="bg-stone-100"
+            className="bg-stone-50"
         >
             <div className="grid gap-8 lg:grid-cols-2 items-start">
                 <form
@@ -112,19 +112,19 @@ export function Contact() {
                     {/* Chip de contexto */}
                     <div className="inline-flex items-center gap-2 rounded-full bg-stone-100 px-3 py-1 mb-1">
                         <span className="h-1.5 w-1.5 rounded-full bg-orange-600" />
-                        <span className="text-[11px] font-medium uppercase tracking-wide text-stone-600">
+                        <span className="text-xs font-medium uppercase tracking-wide text-stone-600">
                             Formulario de contacto general
                         </span>
                     </div>
 
-                    <p className="text-[11px] sm:text-xs text-stone-600 mb-2">
+                    <p className="text-xs sm:text-xs text-stone-600 mb-2">
                         Si tu consulta está relacionada con un peludito en particular, puedes
                         escribir su nombre en el campo correspondiente o mencionarlo en el mensaje.
                     </p>
 
                     {/* Nombre */}
                     <div>
-                        <label className="block text-xs font-medium text-stone-700">
+                        <label className="block text-sm font-medium text-stone-700">
                             Nombre completo
                         </label>
                         <input
@@ -141,7 +141,7 @@ export function Contact() {
 
                     {/* Correo */}
                     <div>
-                        <label className="block text-xs font-medium text-stone-700">
+                        <label className="block text-sm font-medium text-stone-700">
                             Correo electrónico
                         </label>
                         <input
@@ -158,7 +158,7 @@ export function Contact() {
 
                     {/* Motivo */}
                     <div>
-                        <label className="block text-xs font-medium text-stone-700">
+                        <label className="block text-sm font-medium text-stone-700">
                             Motivo de contacto
                         </label>
                         <select
@@ -181,8 +181,8 @@ export function Contact() {
 
                     {/* Nombre del animal (opcional) */}
                     <div>
-                        <label className="block text-xs font-medium text-stone-700">
-                            Nombre del animal (si aplica)
+                        <label className="block text-sm font-medium text-stone-700">
+                            Nombre de la mascota (si aplica)
                         </label>
                         <input
                             type="text"
@@ -195,7 +195,7 @@ export function Contact() {
 
                     {/* Mensaje */}
                     <div>
-                        <label className="block text-xs font-medium text-stone-700">
+                        <label className="block text-sm font-medium text-stone-700">
                             Mensaje
                         </label>
                         <textarea
@@ -240,7 +240,7 @@ export function Contact() {
                         <h3 className="text-sm font-semibold text-stone-900">
                             Datos de contacto
                         </h3>
-                        <p className="mt-2 text-xs sm:text-sm text-stone-600">
+                        <p className="mt-2 text-sm text-stone-600">
                             Aquí se pueden mostrar los datos de contacto del refugio para
                             consultas rápidas.
                         </p>
@@ -272,8 +272,8 @@ export function Contact() {
                 >
                     <div
                         className={`w-full max-w-sm rounded-3xl bg-white border border-stone-200 shadow-xl p-5 sm:p-6 transform transition-all duration-200 ${isClosingSuccess
-                                ? "opacity-0 scale-95 translate-y-2"
-                                : "opacity-100 scale-100 translate-y-0"
+                            ? "opacity-0 scale-95 translate-y-2"
+                            : "opacity-100 scale-100 translate-y-0"
                             }`}
                     >
                         <div className="flex justify-between items-start gap-3">

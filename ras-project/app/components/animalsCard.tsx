@@ -57,10 +57,10 @@ export function AnimalCard({ animal, onDetailsClick }: AnimalCardProps) {
             <div className="flex flex-1 flex-col p-4">
                 <div className="flex items-start justify-between gap-2">
                     <div>
-                        <h3 className="text-sm font-semibold text-stone-900 flex items-center gap-1.5">
+                        <h3 className="text-base font-semibold text-stone-900 flex items-center gap-1.5">
                             {animal.name}
                         </h3>
-                        <p className="mt-1 text-[11px] text-stone-500">
+                        <p className="mt-1 text-sm text-stone-500">
                             {animal.age} · {animal.size}
                         </p>
                     </div>
@@ -71,7 +71,7 @@ export function AnimalCard({ animal, onDetailsClick }: AnimalCardProps) {
                     <button
                         type="button"
                         onClick={() => onDetailsClick(animal)}
-                        className="text-xs font-semibold text-orange-700 hover:text-orange-600 cursor-pointer"
+                        className="text-xs bg-orange-600 py-1 px-3 rounded-full font-semibold text-white hover:bg-orange-700 cursor-pointer"
                     >
                         Ver detalles
                     </button>

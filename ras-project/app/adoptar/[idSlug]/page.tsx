@@ -141,7 +141,7 @@ export default function AdoptarPage() {
                 <div className="mb-4">
                     <Link
                         href="/#mascotas"
-                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-stone-500 hover:text-stone-800"
+                        className="inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-stone-800"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         <span>Volver a mascotas en adopción</span>
@@ -213,11 +213,11 @@ export default function AdoptarPage() {
                         </div>
 
                         <div className="rounded-2xl bg-white border border-stone-200 p-4 space-y-2">
-                            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
+                            <p className="text-sm font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
                                 <ShieldCheck className="h-3.5 w-3.5 text-amber-600" />
                                 ¿Cómo funciona la adopción?
                             </p>
-                            <ol className="mt-1 space-y-1 text-xs sm:text-sm text-stone-700 list-decimal list-inside">
+                            <ol className="mt-1 space-y-1 text-sm text-stone-700 list-decimal list-inside">
                                 <li>Completas este formulario con información básica.</li>
                                 <li>El equipo del refugio revisa tu solicitud y te contacta.</li>
                                 <li>

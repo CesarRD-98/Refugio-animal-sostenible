@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { ReactNode } from "react";
 import { Container } from "./Container";
 import { motion } from "framer-motion";
@@ -31,19 +31,29 @@ export function Section({
         >
             <Container>
                 {(eyebrow || title || description) && (
-                    <header className="mb-8 text-center max-w-2xl mx-auto">
+                    <header className="mb-8 text-center max-w-4xl mx-auto">
+                        {/* EYEBROW: botón con líneas laterales */}
                         {eyebrow && (
-                            <p className="text-sm font-semibold uppercase tracking-wide text-amber-600">
-                                {eyebrow}
-                            </p>
+                            <div className="mb-2">
+                                <span className="inline-flex items-center text-sm sm:text-sm font-semibold uppercase tracking-wide text-orange-700">
+                                    {eyebrow}
+                                </span>
+                            </div>
                         )}
+
+                        {/* TITLE: estilo botón suave */}
                         {title && (
-                            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-stone-900">
-                                {title}
+                            <h2 className="mb-4 flex items-center justify-center gap-3">
+                                <span className="hidden sm:block h-px flex-1 bg-stone-200" />
+                                <span className="inline-flex items-center px-3 py-1 text-xl sm:text-3xl font-semibold  tracking-normal text-stone-700">
+                                    {title}
+                                </span>
+                                <span className="hidden sm:block h-px flex-1 bg-stone-200" />
                             </h2>
                         )}
+
                         {description && (
-                            <p className="mt-3 text-sm sm:text-base text-stone-600">
+                            <p className="mt-4 text-sm sm:text-base text-stone-500">
                                 {description}
                             </p>
                         )}

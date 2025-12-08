@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { Section } from "./layout/Section";
 import {
     Quote,
@@ -93,7 +92,7 @@ export function Testimonials() {
             eyebrow="Historias reales"
             title="Experiencias que inspiran confianza."
             description="Cada adopción, cada voluntario y cada aporte construyen historias que demuestran que el cambio es posible."
-            className="bg-stone-50"
+            className="bg-white"
         >
             <div className="max-w-5xl mx-auto">
                 {/* Grid dinámico */}

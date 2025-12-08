@@ -261,14 +261,14 @@ export function AnimalsSection() {
                         {/* Header */}
                         <div className="sticky top-0 z-20 flex items-start justify-between px-5 pt-4 pb-3 bg-white/90 backdrop-blur border-b border-stone-200">
                             <div>
-                                <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-600">
+                                <p className="text-xs font-semibold uppercase tracking-wide text-amber-600">
                                     Ficha de adopción
                                 </p>
-                                <h3 className="text-sm sm:text-base font-semibold text-stone-900 flex items-center gap-1.5">
+                                <h3 className="text-base sm:text-base font-semibold text-stone-900 flex items-center gap-1.5">
                                     <PawPrint className="h-4 w-4 text-amber-600" />
                                     {selectedAnimal.name}
                                 </h3>
-                                <p className="text-[11px] text-stone-500">
+                                <p className="text-xs text-stone-500">
                                     {selectedAnimal.type} · {selectedAnimal.age} ·{" "}
                                     {selectedAnimal.size}
                                 </p>
@@ -279,7 +279,7 @@ export function AnimalsSection() {
                                 className="rounded-full p-2 hover:bg-stone-100 transition"
                                 aria-label="Cerrar"
                             >
-                                <X className="h-4 w-4 text-stone-500" />
+                                <X className="h-5 w-5 text-stone-500" />
                             </button>
                         </div>
 
@@ -297,18 +297,18 @@ export function AnimalsSection() {
 
                             {/* Info */}
                             <div className="px-5 py-4 space-y-4">
-                                <p className="text-xs sm:text-sm text-stone-600">
+                                <p className="text-sm text-stone-600">
                                     {selectedAnimal.description}
                                 </p>
 
                                 {/* Datos clave de adopción */}
                                 <div className="rounded-xl bg-stone-50 border border-stone-200 px-3 py-3 space-y-2">
-                                    <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
+                                    <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
                                         <Syringe className="h-3.5 w-3.5 text-amber-600" />
                                         Información de salud y cuidado
                                     </p>
 
-                                    <div className="grid grid-cols-2 gap-2 text-[11px] sm:text-xs text-stone-600">
+                                    <div className="grid grid-cols-2 gap-2 text-xs text-stone-600">
                                         <div>
                                             <p className="font-semibold text-stone-900">Sexo</p>
                                             <p className="mt-0.5">
@@ -381,7 +381,7 @@ export function AnimalsSection() {
                                     <Link
                                         href={`/adoptar/${selectedAnimal.id}-${slugify(selectedAnimal.name)}`}
                                         onClick={handleCloseModal}
-                                        className="inline-flex items-center justify-center rounded-full bg-orange-700 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-orange-600 transition"
+                                        className="inline-flex items-center justify-center rounded-full bg-orange-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition"
                                     >
                                         Quiero adoptar a {selectedAnimal.name}
                                     </Link>
