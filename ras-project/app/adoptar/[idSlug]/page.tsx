@@ -140,7 +140,7 @@ export default function AdoptarPage() {
                 {/* Breadcrumb */}
                 <div className="mb-4">
                     <Link
-                        href="/#animales"
+                        href="/#mascotas"
                         className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-stone-500 hover:text-stone-800"
                     >
                         <ArrowLeft className="h-4 w-4" />

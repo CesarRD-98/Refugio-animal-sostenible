@@ -11,7 +11,7 @@ export function Header() {
         <header className="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-stone-200">
             <Container className="flex h-16 items-center justify-between gap-4">
                 {/* Logo */}
-                <Link href="#inicio" className="flex items-center gap-2">
+                <Link href="/#inicio" className="flex items-center gap-2">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl text-white">
                         <Image
                             src="/logo-cra.png"
@@ -33,25 +33,31 @@ export function Header() {
                 {/* Navegación desktop */}
                 <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-stone-700">
                     <Link
-                        href="#mascotas"
+                        href="/#mascotas"
                         className="hover:text-orange-700 transition"
                     >
                         Mascotas
                     </Link>
                     <Link
-                        href="#como-ayudar"
+                        href="/#como-ayudar"
                         className="hover:text-orange-700 transition"
                     >
                         Cómo ayudar
                     </Link>
                     <Link
-                        href="#sobre-nosotros"
+                        href="/#testimonios"
+                        className="hover:text-orange-700 transition"
+                    >
+                        Historias
+                    </Link>
+                    <Link
+                        href="/#sobre-nosotros"
                         className="hover:text-orange-700 transition"
                     >
                         Quiénes somos
                     </Link>
                     <Link
-                        href="#contacto"
+                        href="/#contacto"
                         className="hover:text-orange-700 transition"
                     >
                         Contacto
@@ -62,7 +68,7 @@ export function Header() {
                 <div className="flex items-center gap-3">
                     {/* Secundario: Quiero ayudar → sección cómo ayudar */}
                     <Link
-                        href="#como-ayudar"
+                        href="/#como-ayudar"
                         className="hidden sm:inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-xs font-semibold text-rose-700 hover:bg-rose-100 hover:border-rose-400 transition"
                     >
                         <Heart className="h-4 w-4" />
@@ -71,7 +77,7 @@ export function Header() {
 
                     {/* Principal: Ver mascotas → mismas que el hero */}
                     <Link
-                        href="#mascotas"
+                        href="/#mascotas"
                         className="inline-flex items-center justify-center gap-1.5 rounded-full bg-orange-700 px-4 py-2 text-xs font-semibold text-white hover:bg-orange-600 transition"
                     >
                         <PawPrint className="h-4 w-4" />

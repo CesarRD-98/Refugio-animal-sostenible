@@ -1,6 +1,5 @@
 // app/components/Footer.tsx
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "./layout/Container";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 
@@ -48,7 +47,7 @@ export function Footer() {
                   Inicio
                 </Link>
                 <Link
-                  href="/#animales"
+                  href="/#mascotas"
                   className="hover:text-orange-700 transition"
                 >
                   Mascotas
@@ -58,6 +57,12 @@ export function Footer() {
                   className="hover:text-orange-700 transition"
                 >
                   Cómo ayudar
+                </Link>
+                <Link
+                  href="/#testimonios"
+                  className="hover:text-orange-700 transition"
+                >
+                  Historias
                 </Link>
                 <Link
                   href="/#sobre-nosotros"

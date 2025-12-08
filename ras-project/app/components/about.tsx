@@ -1,172 +1,99 @@
 // app/components/About.tsx
+"use client";
+
+import Link from "next/link";
 import { Section } from "./layout/Section";
-import { HeartHandshake, Target, Leaf, Users } from "lucide-react";
+import { HeartHandshake, PawPrint, Users } from "lucide-react";
 
 export function About() {
-  const valores = [
-    "Empatía",
-    "Responsabilidad",
-    "Transparencia",
-    "Sostenibilidad",
-    "Compromiso comunitario",
-    "Integridad",
-  ];
+    return (
+        <Section
+            id="sobre-nosotros"
+            eyebrow="¿Quiénes somos?"
+            title="Un refugio temporal para nuevos comienzos."
+            description="En el CRA – Centro de Rescate Animal rescatamos, cuidamos y acompañamos a perros y gatos en situación de calle, conectándolos con familias dispuestas a ofrecer un hogar responsable y lleno de cariño."
+            className="bg-white"
+        >
+            <div className="grid gap-8 lg:grid-cols-[1.1fr,1fr] items-center">
+                {/* Columna izquierda: texto breve + CTA */}
+                <div className="space-y-5">
+                    <p className="text-sm sm:text-base text-stone-700">
+                        Trabajamos para que cada peludito tenga una{" "}
+                        <strong>segunda oportunidad</strong>: desde el rescate y la atención
+                        básica, hasta el acompañamiento en el proceso de{" "}
+                        <strong>adopción responsable y transparente</strong>.
+                    </p>
 
-  return (
-    <Section
-      id="sobre-nosotros"
-      eyebrow="¿Quiénes somos?"
-      title="Un refugio temporal con impacto sostenible."
-      description="CRA – Centro de Rescate Animal combina rescate, adopción responsable y participación comunitaria para darle una segunda oportunidad a perros y gatos en situación de calle."
-      className="bg-white"
-    >
-      <div className="grid gap-10 lg:grid-cols-[1.05fr,1fr] items-start">
-        {/* HISTORIA */}
-        <div className="relative">
-          <div className="absolute -inset-x-6 -inset-y-4 rounded-3xl bg-gradient-to-b from-stone-50 via-white to-stone-50/60 pointer-events-none hidden sm:block" />
+                    <p className="text-sm sm:text-base text-stone-700">
+                        Si quieres conocer mejor cómo pensamos, cómo trabajamos y qué nos
+                        diferencia de otros refugios, puedes explorar nuestra historia,
+                        misión, visión y valores en la página dedicada de{" "}
+                        <strong>Sobre nosotros</strong>.
+                    </p>
 
-          <div className="relative rounded-3xl border border-stone-200 bg-white/85 px-4 py-5 sm:px-7 sm:py-7 shadow-sm">
-            <div className="inline-flex items-center gap-2 rounded-full bg-stone-100 px-3 py-1 mb-4">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              <span className="text-[11px] font-medium uppercase tracking-wide text-stone-600">
-                Nuestra historia
-              </span>
+                    <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                            href="/sobre-nosotros"
+                            className="inline-flex items-center gap-2 rounded-full bg-orange-700 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-orange-600 transition"
+                        >
+                            <HeartHandshake className="h-4 w-4" />
+                            Conocer más sobre el CRA
+                        </Link>
+
+                        <p className="text-[11px] sm:text-xs text-stone-500">
+                            Pensado para quienes desean profundizar en nuestro trabajo.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Columna derecha: mini cards de pilares */}
+                <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-stone-200 bg-stone-50/80 p-4 shadow-sm">
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="h-9 w-9 rounded-xl bg-rose-100 flex items-center justify-center">
+                                <HeartHandshake className="h-4 w-4 text-rose-600" />
+                            </div>
+                            <h3 className="text-sm font-semibold text-stone-900">
+                                Bienestar primero
+                            </h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-stone-600">
+                            Rescate, atención básica y cuidado responsable antes de cada
+                            adopción.
+                        </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-stone-200 bg-stone-50/80 p-4 shadow-sm">
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="h-9 w-9 rounded-xl bg-orange-100 flex items-center justify-center">
+                                <PawPrint className="h-4 w-4 text-orange-700" />
+                            </div>
+                            <h3 className="text-sm font-semibold text-stone-900">
+                                Adopciones responsables
+                            </h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-stone-600">
+                            Buscamos el mejor match entre cada animal y la familia que lo va a
+                            recibir.
+                        </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-stone-200 bg-stone-50/80 p-4 shadow-sm sm:col-span-2">
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="h-9 w-9 rounded-xl bg-emerald-100 flex items-center justify-center">
+                                <Users className="h-4 w-4 text-emerald-700" />
+                            </div>
+                            <h3 className="text-sm font-semibold text-stone-900">
+                                Comunidad y transparencia
+                            </h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-stone-600">
+                            Queremos que la comunidad se involucre: voluntariado, donaciones y
+                            comunicación clara sobre el impacto de cada ayuda.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div className="space-y-4 text-sm sm:text-base text-stone-600">
-              <p>
-                CRA nace al observar una realidad que no se puede ignorar:
-                perros y gatos viviendo en la calle, expuestos al hambre, a
-                la violencia y a la indiferencia. Lo que comenzó como una
-                inquietud entre compañeros se convierte aquí en una propuesta
-                organizada para ofrecer un refugio temporal digno.
-              </p>
-              <p>
-                Este proyecto funciona como un prototipo académico dentro de un
-                proceso de Design Thinking. A través de esta plataforma
-                exploramos cómo una solución digital puede facilitar adopciones
-                responsables, donaciones y voluntariado, siempre desde la
-                transparencia, el cuidado responsable y el trabajo en equipo.
-              </p>
-            </div>
-
-            {/* Chips visuales */}
-            <div className="mt-5 border-t border-stone-200 pt-4 space-y-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-stone-500">
-                En pocas palabras
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Refugio temporal",
-                  "Adopciones responsables",
-                  "Conciencia comunitaria",
-                ].map((label) => (
-                  <span
-                    key={label}
-                    className="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-[11px] font-medium text-stone-700"
-                  >
-                    {label}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* MISIÓN, VISIÓN Y VALORES – BLOQUE ÚNICO */}
-        <div className="space-y-5">
-          <div className="rounded-3xl border border-stone-200 bg-stone-50/90 p-5 sm:p-6 shadow-sm">
-            <div className="inline-flex items-center gap-2 rounded-full bg-stone-100 px-3 py-1 mb-4">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-              <span className="text-[11px] font-medium uppercase tracking-wide text-stone-600">
-                Misión, visión y valores
-              </span>
-            </div>
-
-            <div className="space-y-6">
-              {/* Misión */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-rose-100 flex items-center justify-center">
-                    <HeartHandshake className="h-5 w-5 text-rose-500" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-sm sm:text-base font-semibold text-stone-900">
-                    Misión
-                  </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-stone-600">
-                    Brindar un espacio seguro a los animales en situación de calle,
-                    garantizando su bienestar, atención básica y promoviendo la
-                    adopción responsable en armonía con la comunidad.
-                  </p>
-                </div>
-              </div>
-
-              <div className="h-px bg-stone-200/80" />
-
-              {/* Visión */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-amber-100 flex items-center justify-center">
-                    <Target className="h-5 w-5 text-amber-600" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-sm sm:text-base font-semibold text-stone-900">
-                    Visión
-                  </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-stone-600">
-                    Ser una institución referente a nivel nacional en el rescate y
-                    protección animal, promoviendo una comunidad consciente, empática
-                    y comprometida con la vida.
-                  </p>
-                </div>
-              </div>
-
-              <div className="h-px bg-stone-200/80" />
-
-              {/* Valores */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                    <Users className="h-5 w-5 text-stone-700" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-sm sm:text-base font-semibold text-stone-900">
-                      Nuestros valores
-                    </h3>
-                    <Leaf className="h-4 w-4 text-amber-600" />
-                  </div>
-
-                  <p className="mt-2 text-xs sm:text-sm text-stone-600">
-                    Cada decisión en CRA se inspira en principios que buscan equilibrio
-                    entre bienestar animal, comunidad y sostenibilidad.
-                  </p>
-
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {valores.map((value) => (
-                      <span
-                        key={value}
-                        className="inline-flex items-center rounded-full border border-stone-200 bg-white px-3 py-1 text-[11px] sm:text-xs font-medium text-stone-700"
-                      >
-                        {value}
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="mt-3 text-[11px] sm:text-xs text-stone-500">
-                    Promoviendo el bienestar, comunidades sostenibles y un uso responsable
-                    de los recursos.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
-  );
+        </Section>
+    );
 }
