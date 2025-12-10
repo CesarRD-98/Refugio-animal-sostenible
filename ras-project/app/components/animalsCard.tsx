@@ -14,9 +14,9 @@ export interface Animal {
 
     // Datos extra para el modal
     sex?: "Macho" | "Hembra";
-    vaccines?: string;    
+    vaccines?: string;
     sterilized?: boolean;
-    dewormed?: boolean;    
+    dewormed?: boolean;
     temperament?: string;
 }
 
@@ -29,49 +29,76 @@ export function AnimalCard({ animal, onDetailsClick }: AnimalCardProps) {
     const isAvailable = animal.status === "En adopción";
 
     return (
-        <article className="flex flex-col rounded-2xl border border-stone-200 bg-white shadow-sm overflow-hidden">
+        <article
+            className="
+        group flex flex-col overflow-hidden rounded-xl 
+        border border-stone-200 bg-white 
+        shadow-sm hover:shadow-md hover:-translate-y-1 
+        transition-all
+      "
+        >
             {/* Imagen */}
-            <div className="relative h-32 sm:h-36">
+            <div className="relative h-40 sm:h-44 overflow-hidden">
                 <Image
                     src={animal.imageUrl}
                     alt={animal.name}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+
+                {/* Badges “frosted” */}
                 <div className="absolute inset-x-0 top-0 flex justify-between p-2 text-[10px]">
-                    <span className="inline-flex items-center rounded-full bg-yellow-100/90 px-2 py-0.5 font-medium text-yellow-800">
+                    {/* Tipo */}
+                    <span className="
+            inline-flex items-center rounded-full 
+            bg-white/60 backdrop-blur-sm 
+            px-2 py-0.5 font-medium text-stone-700
+            shadow-sm
+          ">
                         {animal.type}
                     </span>
-                    <span
-                        className={`inline-flex items-center rounded-full px-2 py-0.5 font-medium ${isAvailable
-                                ? "bg-orange-700 text-white"
-                                : "bg-rose-400/90 text-white"
-                            }`}
-                    >
-                        {isAvailable ? "En adopción" : "En recuperación"}
+
+                    {/* Estado */}
+                    <span className={`
+            inline-flex items-center rounded-full px-2 py-0.5 
+            font-medium shadow-sm backdrop-blur-sm
+            ${isAvailable
+                            ? "bg-orange-600/90 text-white"
+                            : "bg-rose-500/90 text-white"
+                        }
+          `}>
+                        {animal.status}
                     </span>
                 </div>
             </div>
 
             {/* Contenido */}
             <div className="flex flex-1 flex-col p-4">
+
+                {/* Nombre + Icono */}
                 <div className="flex items-start justify-between gap-2">
                     <div>
-                        <h3 className="text-base font-semibold text-stone-900 flex items-center gap-1.5">
+                        <h3 className="text-base font-semibold text-stone-900">
                             {animal.name}
                         </h3>
                         <p className="mt-1 text-sm text-stone-500">
                             {animal.age} · {animal.size}
                         </p>
                     </div>
-                    <PawPrint className="h-4 w-4 text-amber-600" />
+
+                    <PawPrint className="h-5 w-5 text-amber-600 opacity-80" />
                 </div>
 
+                {/* Botón */}
                 <div className="mt-4 flex items-center justify-between">
                     <button
                         type="button"
                         onClick={() => onDetailsClick(animal)}
-                        className="text-xs bg-orange-600 py-1 px-3 rounded-full font-semibold text-white hover:bg-orange-700 cursor-pointer"
+                        className="
+              text-xs bg-orange-700 py-1.5 px-4 
+              rounded-full font-semibold text-white 
+              hover:bg-orange-600 transition
+            "
                     >
                         Ver detalles
                     </button>

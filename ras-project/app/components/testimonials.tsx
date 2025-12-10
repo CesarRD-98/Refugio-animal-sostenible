@@ -1,4 +1,3 @@
-// app/components/Testimonials.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -70,15 +69,11 @@ export function Testimonials() {
     const totalGroups = Math.ceil(testimonials.length / itemsPerView);
 
     const handlePrev = () => {
-        setCurrentIndex((prev) =>
-            prev === 0 ? totalGroups - 1 : prev - 1
-        );
+        setCurrentIndex((prev) => (prev === 0 ? totalGroups - 1 : prev - 1));
     };
 
     const handleNext = () => {
-        setCurrentIndex((prev) =>
-            prev === totalGroups - 1 ? 0 : prev + 1
-        );
+        setCurrentIndex((prev) => (prev === totalGroups - 1 ? 0 : prev + 1));
     };
 
     const visibleTestimonials = testimonials.slice(
@@ -92,15 +87,18 @@ export function Testimonials() {
             eyebrow="Historias reales"
             title="Experiencias que inspiran confianza."
             description="Cada adopción, cada voluntario y cada aporte construyen historias que demuestran que el cambio es posible."
-            className="bg-white"
+            className="bg-stone-50"
         >
             <div className="max-w-5xl mx-auto">
                 {/* Grid dinámico */}
-                <div className={`grid gap-5 ${itemsPerView === 2 ? "md:grid-cols-2" : "grid-cols-1"}`}>
+                <div
+                    className={`grid gap-5 ${itemsPerView === 2 ? "md:grid-cols-2" : "grid-cols-1"
+                        }`}
+                >
                     {visibleTestimonials.map((t) => (
                         <div
                             key={t.id}
-                            className="rounded-3xl border border-stone-200 bg-white p-5 sm:p-6 shadow-sm"
+                            className="rounded-md border border-stone-200 bg-white p-5 sm:p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition"
                         >
                             <div className="flex items-center gap-2 mb-3">
                                 <div className="h-9 w-9 rounded-full bg-orange-100 flex items-center justify-center">
@@ -145,8 +143,10 @@ export function Testimonials() {
                             <span
                                 key={i}
                                 className={[
-                                    "h-1.5 w-1.5 rounded-full transition",
-                                    i === currentIndex ? "bg-orange-700" : "bg-stone-300",
+                                    "h-1.5 w-3 rounded-full transition",
+                                    i === currentIndex
+                                        ? "bg-orange-600"
+                                        : "bg-stone-300",
                                 ].join(" ")}
                             />
                         ))}
@@ -156,14 +156,28 @@ export function Testimonials() {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={handlePrev}
-                            className="h-8 w-8 flex items-center justify-center rounded-full border border-stone-200 bg-white hover:bg-stone-100 transition"
+                            className="
+                h-8 w-8 flex items-center justify-center 
+                rounded-full 
+                border border-stone-200 
+                bg-white 
+                hover:bg-stone-100 
+                transition
+              "
                         >
                             <ChevronLeft className="h-4 w-4 text-stone-700" />
                         </button>
 
                         <button
                             onClick={handleNext}
-                            className="h-8 w-8 flex items-center justify-center rounded-full border border-stone-200 bg-white hover:bg-stone-100 transition"
+                            className="
+                h-8 w-8 flex items-center justify-center 
+                rounded-full 
+                border border-stone-200 
+                bg-white 
+                hover:bg-stone-100 
+                transition
+              "
                         >
                             <ChevronRight className="h-4 w-4 text-stone-700" />
                         </button>

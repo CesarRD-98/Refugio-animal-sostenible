@@ -88,7 +88,7 @@ export function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                     >
-                        <div className="relative rounded-3xl bg-white shadow-lg border border-stone-200 p-5 sm:p-6">
+                        <div className="relative rounded-lg bg-white shadow-md border border-stone-200 p-5 sm:p-6">
                             <div className="flex items-center justify-between gap-4">
                                 <div>
                                     <p className="text-xs font-semibold uppercase tracking-wide text-amber-600">
@@ -113,7 +113,7 @@ export function Hero() {
                             </div>
 
                             <div className="mt-5 grid grid-cols-3 gap-3">
-                                <div className="relative h-20 overflow-hidden rounded-xl border border-stone-200">
+                                <div className="relative h-20 overflow-hidden rounded-md border border-stone-200">
                                     <Image
                                         src="/hero-animal-1.jpg"
                                         alt="Animal en adopción"
@@ -121,7 +121,7 @@ export function Hero() {
                                         className="object-cover"
                                     />
                                 </div>
-                                <div className="relative h-20 overflow-hidden rounded-xl border border-stone-200">
+                                <div className="relative h-20 overflow-hidden rounded-md border border-stone-200">
                                     <Image
                                         src="/hero-animal-2.jpg"
                                         alt="Animal en adopción"
@@ -129,7 +129,7 @@ export function Hero() {
                                         className="object-cover"
                                     />
                                 </div>
-                                <div className="relative h-20 overflow-hidden rounded-xl border border-stone-200">
+                                <div className="relative h-20 overflow-hidden rounded-md border border-stone-200">
                                     <Image
                                         src="/hero-animal-3.jpg"
                                         alt="Animal en adopción"
@@ -150,7 +150,7 @@ export function Hero() {
 
                 {/* Eslogan + ODS SOLO AQUÍ */}
                 <motion.div
-                    className="mt-8 rounded-2xl bg-amber-600 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white shadow-md"
+                    className="mt-8 rounded-2xl bg-amber-600 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white shadow-lg"
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}

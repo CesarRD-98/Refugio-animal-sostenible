@@ -1,4 +1,3 @@
-// app/components/HowItWorks.tsx
 import { Section } from "./layout/Section";
 import {
     Search,
@@ -13,7 +12,7 @@ export function HowItWorks() {
         {
             title: "Descubre un peludito",
             description:
-                "Explora los perfiles de perros y gatos, conoce su historia y su personalidad.",
+                "Explora los perfiles de perros y gatos, conoce su historia y personalidad.",
             icon: Search,
         },
         {
@@ -48,7 +47,7 @@ export function HowItWorks() {
             eyebrow="¿Cómo funciona?"
             title="Un proceso claro para una adopción responsable."
             description="Queremos que te sientas acompañado en cada paso. Nuestro proceso es transparente, humano y centrado en el bienestar del animal."
-            className="bg-stone-100/80"
+            className=""
         >
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
                 {steps.map((step, index) => {
@@ -56,17 +55,18 @@ export function HowItWorks() {
                     return (
                         <div
                             key={index}
-                            className="relative rounded-3xl bg-white p-5 shadow-sm text-center"
+                            className="rounded-lg bg-white border border-amber-200 p-6 shadow-sm transition hover:shadow-md hover:-translate-y-1 text-center"
                         >
-                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100">
-                                <Icon className="h-6 w-6 text-orange-700" />
+                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 ring-2 ring-amber-300">
+                                <Icon className="h-6 w-6 text-amber-700" />
                             </div>
 
-                            <h3 className="text-base font-semibold text-stone-900">
+                            <h3 className="text-base font-semibold text-amber-800">
                                 {step.title}
                             </h3>
-
-                            <p className="mt-2 text-sm text-stone-600">{step.description}</p>
+                            <p className="mt-2 text-sm text-stone-600">
+                                {step.description}
+                            </p>
                         </div>
                     );
                 })}

@@ -1,4 +1,3 @@
-// app/components/Transparency.tsx
 import { Section } from "./layout/Section";
 import {
     ShieldCheck,
@@ -17,7 +16,7 @@ export function Transparency() {
             iconColor: "text-emerald-700",
         },
         {
-            title: "Información clara de cada animal",
+            title: "Información clara de cada mascota",
             description:
                 "Mostramos historial, estado actual, personalidad y necesidades para que adoptes con confianza.",
             icon: ClipboardList,
@@ -40,7 +39,7 @@ export function Transparency() {
             eyebrow="Transparencia"
             title="Comprometidos con la claridad y la confianza."
             description="Creemos que la transparencia es esencial para construir relaciones duraderas con adoptantes, donantes y voluntarios."
-            className="bg-stone-50"
+            className=""
         >
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {pillars.map((item, index) => {
@@ -48,11 +47,9 @@ export function Transparency() {
                     return (
                         <div
                             key={index}
-                            className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm"
+                            className="rounded-md bg-white border border-stone-200 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition"
                         >
-                            <div
-                                className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl ${item.bg}`}
-                            >
+                            <div className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full ${item.bg}`}>
                                 <Icon className={`h-6 w-6 ${item.iconColor}`} />
                             </div>
 

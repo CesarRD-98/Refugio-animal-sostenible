@@ -151,7 +151,7 @@ export default function AdoptarPage() {
                 {/* Header vistoso */}
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10 mb-8">
                     {/* Datos del animal */}
-                    <div className="w-full max-w-sm rounded-3xl bg-white border border-stone-200 shadow-sm overflow-hidden">
+                    <div className="w-full max-w-sm rounded-md bg-white border border-stone-200 shadow-sm overflow-hidden">
                         <div className="relative h-52 w-full">
                             <Image
                                 src={animal.imageUrl}
@@ -212,7 +212,7 @@ export default function AdoptarPage() {
                             </p>
                         </div>
 
-                        <div className="rounded-2xl bg-white border border-stone-200 p-4 space-y-2">
+                        <div className="rounded-md bg-white border border-stone-200 p-4 space-y-2">
                             <p className="text-sm font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
                                 <ShieldCheck className="h-3.5 w-3.5 text-amber-600" />
                                 ¿Cómo funciona la adopción?
@@ -238,7 +238,7 @@ export default function AdoptarPage() {
                 </div>
 
                 {/* Formulario de adopción */}
-                <section className="rounded-3xl bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
+                <section className="rounded-md bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
                     <h3 className="text-lg font-semibold text-stone-900 mb-1">
                         Formulario de adopción
                     </h3>
@@ -259,7 +259,7 @@ export default function AdoptarPage() {
                                     name="nombreCompleto"
                                     type="text"
                                     data-error={!!errors.nombreCompleto || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -278,7 +278,7 @@ export default function AdoptarPage() {
                                     name="telefono"
                                     type="tel"
                                     data-error={!!errors.telefono || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -297,7 +297,7 @@ export default function AdoptarPage() {
                                     name="correo"
                                     type="email"
                                     data-error={!!errors.correo || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -316,7 +316,7 @@ export default function AdoptarPage() {
                                     name="ciudad"
                                     type="text"
                                     data-error={!!errors.ciudad || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.ciudad
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.ciudad
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -338,7 +338,7 @@ export default function AdoptarPage() {
                                 <select
                                     name="vivienda"
                                     data-error={!!errors.vivienda || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.vivienda
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.vivienda
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -362,7 +362,7 @@ export default function AdoptarPage() {
                                     name="otrasMascotas"
                                     type="text"
                                     placeholder="Ej. 1 perro, 1 gato, ninguna..."
-                                    className="w-full rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
+                                    className="w-full rounded-md border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
                                 />
                             </div>
                         </div>
@@ -376,7 +376,7 @@ export default function AdoptarPage() {
                                 <select
                                     name="tiempoFuera"
                                     data-error={!!errors.tiempoFuera || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.tiempoFuera
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.tiempoFuera
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -401,7 +401,7 @@ export default function AdoptarPage() {
                                     name="motivo"
                                     rows={3}
                                     data-error={!!errors.motivo || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.motivo
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.motivo
                                         ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                         : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -424,7 +424,7 @@ export default function AdoptarPage() {
                                 name="peludito"
                                 type="text"
                                 defaultValue={animal.name}
-                                className="w-full rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
+                                className="w-full rounded-md border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
                             />
                         </div>
 
@@ -459,7 +459,7 @@ export default function AdoptarPage() {
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="w-full max-w-md rounded-3xl bg-white border border-stone-200 shadow-xl p-6 space-y-4"
+                            className="w-full max-w-md rounded-md bg-white border border-stone-200 shadow-xl p-6 space-y-4"
                             initial={{ opacity: 0, scale: 0.9, y: 16 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 16 }}

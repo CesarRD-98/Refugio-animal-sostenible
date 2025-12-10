@@ -1,4 +1,3 @@
-// app/components/Contact.tsx
 "use client";
 
 import { useState, FormEvent } from "react";
@@ -69,7 +68,6 @@ export function Contact() {
         event.preventDefault();
         if (!validate()) return;
 
-        // Simulación de envío
         setIsSubmitting(true);
 
         setTimeout(() => {
@@ -77,7 +75,6 @@ export function Contact() {
             setIsClosingSuccess(false);
             setShowSuccess(true);
 
-            // Limpiar formulario
             setForm({
                 name: "",
                 email: "",
@@ -107,17 +104,17 @@ export function Contact() {
             <div className="grid gap-8 lg:grid-cols-2 items-start">
                 <form
                     onSubmit={handleSubmit}
-                    className="space-y-4 bg-white border border-stone-200 rounded-2xl p-4 sm:p-5 shadow-sm"
+                    className="space-y-4 bg-white border border-stone-200 rounded-md p-4 sm:p-5 shadow-sm"
                 >
                     {/* Chip de contexto */}
-                    <div className="inline-flex items-center gap-2 rounded-full bg-stone-100 px-3 py-1 mb-1">
+                    <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-1">
                         <span className="h-1.5 w-1.5 rounded-full bg-orange-600" />
-                        <span className="text-xs font-medium uppercase tracking-wide text-stone-600">
+                        <span className="text-xs sm:text-sm font-medium uppercase tracking-wide">
                             Formulario de contacto general
                         </span>
                     </div>
 
-                    <p className="text-xs sm:text-xs text-stone-600 mb-2">
+                    <p className="text-xs sm:text-xs text-stone-600 mt-2">
                         Si tu consulta está relacionada con un peludito en particular, puedes
                         escribir su nombre en el campo correspondiente o mencionarlo en el mensaje.
                     </p>
@@ -129,7 +126,7 @@ export function Contact() {
                         </label>
                         <input
                             type="text"
-                            className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
+                            className="mt-1 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             placeholder="Ej. Ana López"
                             value={form.name}
                             onChange={(e) => handleChange("name", e.target.value)}
@@ -146,7 +143,7 @@ export function Contact() {
                         </label>
                         <input
                             type="email"
-                            className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
+                            className="mt-1 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             placeholder="tucorreo@ejemplo.com"
                             value={form.email}
                             onChange={(e) => handleChange("email", e.target.value)}
@@ -162,7 +159,7 @@ export function Contact() {
                             Motivo de contacto
                         </label>
                         <select
-                            className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
+                            className="mt-1 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             value={form.reason}
                             onChange={(e) => handleChange("reason", e.target.value)}
                         >
@@ -186,7 +183,7 @@ export function Contact() {
                         </label>
                         <input
                             type="text"
-                            className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
+                            className="mt-1 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             placeholder="Ej. Luna, Milo, Canela..."
                             value={form.animalName}
                             onChange={(e) => handleChange("animalName", e.target.value)}
@@ -199,7 +196,7 @@ export function Contact() {
                             Mensaje
                         </label>
                         <textarea
-                            className="mt-1 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
+                            className="mt-1 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-700/70"
                             rows={4}
                             placeholder="Cuéntanos brevemente tu consulta, comentario o propuesta."
                             value={form.message}
@@ -236,16 +233,16 @@ export function Contact() {
 
                 {/* Columna derecha */}
                 <div className="space-y-4 text-sm text-stone-600">
-                    <div className="rounded-2xl border border-stone-200 bg-white p-4">
+                    <div className="rounded-md border border-stone-200 bg-white p-4 shadow-sm">
                         <h3 className="text-sm font-semibold text-stone-900">
                             Datos de contacto
                         </h3>
                         <p className="mt-2 text-sm text-stone-600">
-                            Aquí se pueden mostrar los datos de contacto del refugio para
+                            Datos de contacto del refugio para
                             consultas rápidas.
                         </p>
 
-                        <div className="flex gap-2 mt-4 text-sm">
+                        <div className="flex flex-wrap gap-3 mt-4 text-sm">
                             <p className="inline-flex items-center gap-2 text-stone-700">
                                 <Mail className="h-4 w-4 text-rose-500" />
                                 <span>crahn@refugio.org</span>
@@ -271,9 +268,9 @@ export function Contact() {
                         }`}
                 >
                     <div
-                        className={`w-full max-w-sm rounded-3xl bg-white border border-stone-200 shadow-xl p-5 sm:p-6 transform transition-all duration-200 ${isClosingSuccess
-                            ? "opacity-0 scale-95 translate-y-2"
-                            : "opacity-100 scale-100 translate-y-0"
+                        className={`w-full max-w-sm rounded-md bg-white border border-stone-200 shadow-xl p-5 sm:p-6 transform transition-all duration-200 ${isClosingSuccess
+                                ? "opacity-0 scale-95 translate-y-2"
+                                : "opacity-100 scale-100 translate-y-0"
                             }`}
                     >
                         <div className="flex justify-between items-start gap-3">

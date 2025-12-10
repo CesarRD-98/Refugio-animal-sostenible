@@ -35,7 +35,7 @@ export function Footer() {
           {/* Bloque de columnas derecha */}
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-12">
             {/* Navegación */}
-            <div className="space-y-2">
+            <div className="space-y-2 max-w-32 bg-stone-800">
               <h3 className="text-sm font-semibold uppercase tracking-wide">
                 Navegación
               </h3>

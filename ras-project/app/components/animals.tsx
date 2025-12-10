@@ -221,7 +221,7 @@ export function AnimalsSection() {
             eyebrow="Mascotas en adopción"
             title="Conoce a algunos de nuestros peluditos"
             description="Aquí puedes conocer a algunos de los perros y gatos que actualmente están buscando un hogar. Revisa su ficha para ver información de salud, temperamento y lo que necesitan para adaptarse a tu familia."
-            className="bg-white"
+            className=""
         >
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {animalsToShow.map((animal) => (
@@ -253,7 +253,7 @@ export function AnimalsSection() {
                         }`}
                 >
                     <div
-                        className={`w-full max-w-2xl max-h-[80vh] md:max-h-[90vh] rounded-3xl bg-white border border-stone-200 shadow-xl overflow-y-auto transform transition-all duration-200 ${isClosing || !isVisible
+                        className={`w-full max-w-2xl max-h-[80vh] md:max-h-[90vh] rounded-md bg-white border border-stone-200 shadow-xl overflow-y-auto transform transition-all duration-200 ${isClosing || !isVisible
                             ? "opacity-0 scale-95 translate-y-2"
                             : "opacity-100 scale-100 translate-y-0"
                             }`}
@@ -302,7 +302,7 @@ export function AnimalsSection() {
                                 </p>
 
                                 {/* Datos clave de adopción */}
-                                <div className="rounded-xl bg-stone-50 border border-stone-200 px-3 py-3 space-y-2">
+                                <div className="rounded-md bg-stone-50 border border-stone-200 px-3 py-3 space-y-2">
                                     <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 flex items-center gap-1.5">
                                         <Syringe className="h-3.5 w-3.5 text-amber-600" />
                                         Información de salud y cuidado
@@ -350,7 +350,7 @@ export function AnimalsSection() {
 
                                 {/* Estado y nota informativa */}
                                 <div className="grid gap-2 text-[11px] sm:text-xs text-stone-600">
-                                    <div className="rounded-xl bg-stone-50 border border-stone-200 px-3 py-2 flex items-center justify-between">
+                                    <div className="rounded-md bg-stone-50 border border-stone-200 px-3 py-2 flex items-center justify-between">
                                         <div className="flex items-center gap-2">
                                             <ShieldCheck className="h-4 w-4 text-amber-600" />
                                             <p className="font-semibold text-stone-900">Estado</p>
@@ -365,7 +365,7 @@ export function AnimalsSection() {
                                         </span>
                                     </div>
 
-                                    <div className="rounded-xl bg-stone-50 border border-stone-200 px-3 py-2 flex items-start gap-2">
+                                    <div className="rounded-md bg-stone-50 border border-stone-200 px-3 py-2 flex items-start gap-2">
                                         <Info className="h-4 w-4 mt-0.5 text-amber-600" />
                                         <p>
                                             La información de esta ficha te ayuda a conocer mejor la

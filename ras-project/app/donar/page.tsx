@@ -113,7 +113,7 @@ export default function DonarPage() {
                             </p>
                         </div>
 
-                        <div className="rounded-2xl bg-white border border-stone-200 p-4 space-y-2">
+                        <div className="rounded-md bg-white border border-stone-200 p-4 space-y-2">
                             <p className="text-sm font-semibold uppercase tracking-normal text-stone-500 flex items-center gap-1.5">
                                 <ShieldCheck className="h-3.5 w-3.5 text-amber-600" />
                                 Transparencia en el uso de recursos
@@ -130,7 +130,7 @@ export default function DonarPage() {
                 </div>
 
                 {/* Formulario */}
-                <section className="rounded-3xl bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
+                <section className="rounded-md bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
                     <h2 className="text-lg font-semibold text-stone-900 mb-1">
                         Formulario para donaciones
                     </h2>
@@ -149,7 +149,7 @@ export default function DonarPage() {
                                     name="nombreCompleto"
                                     type="text"
                                     data-error={!!errors.nombreCompleto || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -169,7 +169,7 @@ export default function DonarPage() {
                                     name="correo"
                                     type="email"
                                     data-error={!!errors.correo || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -187,7 +187,7 @@ export default function DonarPage() {
                                     name="telefono"
                                     type="tel"
                                     data-error={!!errors.telefono || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -208,7 +208,7 @@ export default function DonarPage() {
                                     type="text"
                                     placeholder="Ej. 100, 250..."
                                     data-error={!!errors.monto || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.monto
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.monto
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -227,7 +227,7 @@ export default function DonarPage() {
                                 <select
                                     name="frecuencia"
                                     data-error={!!errors.frecuencia || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.frecuencia
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.frecuencia
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -251,7 +251,7 @@ export default function DonarPage() {
                                 <textarea
                                     name="comentario"
                                     rows={3}
-                                    className="w-full rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
+                                    className="w-full rounded-md border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
                                     placeholder="Si quieres, cuéntanos algo sobre tu motivación para apoyar."
                                 />
                             </div>
@@ -287,7 +287,7 @@ export default function DonarPage() {
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="w-full max-w-md rounded-3xl bg-white border border-stone-200 shadow-xl p-6 space-y-4"
+                            className="w-full max-w-md rounded-md bg-white border border-stone-200 shadow-xl p-6 space-y-4"
                             initial={{ opacity: 0, scale: 0.9, y: 16 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 16 }}

@@ -111,7 +111,7 @@ export default function ApadrinarPage() {
                             </p>
                         </div>
 
-                        <div className="rounded-2xl bg-white border border-stone-200 p-4 space-y-2">
+                        <div className="rounded-md bg-white border border-stone-200 p-4 space-y-2">
                             <p className="text-sm font-semibold uppercase tracking-normal text-stone-500 flex items-center gap-1.5">
                                 <ShieldCheck className="h-3.5 w-3.5 text-amber-600" />
                                 ¿Cómo funciona el padrinazgo?
@@ -126,7 +126,7 @@ export default function ApadrinarPage() {
                     </div>
                 </div>
 
-                <section className="rounded-3xl bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
+                <section className="rounded-md bg-white border border-stone-200 shadow-sm p-5 sm:p-6 lg:p-7">
                     <h2 className="text-lg font-semibold text-stone-900 mb-1">
                         Formulario de padrinazgo
                     </h2>
@@ -145,7 +145,7 @@ export default function ApadrinarPage() {
                                     name="nombreCompleto"
                                     type="text"
                                     data-error={!!errors.nombreCompleto || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.nombreCompleto
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -165,7 +165,7 @@ export default function ApadrinarPage() {
                                     name="correo"
                                     type="email"
                                     data-error={!!errors.correo || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.correo
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -183,7 +183,7 @@ export default function ApadrinarPage() {
                                     name="telefono"
                                     type="tel"
                                     data-error={!!errors.telefono || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.telefono
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -204,7 +204,7 @@ export default function ApadrinarPage() {
                                     type="text"
                                     placeholder="Ej. 150, 300..."
                                     data-error={!!errors.aporteMensual || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.aporteMensual
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.aporteMensual
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -225,7 +225,7 @@ export default function ApadrinarPage() {
                                 <select
                                     name="canalContacto"
                                     data-error={!!errors.canalContacto || undefined}
-                                    className={`w-full rounded-xl border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.canalContacto
+                                    className={`w-full rounded-md border bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:bg-white focus:ring-1 ${errors.canalContacto
                                             ? "border-rose-500 focus:border-rose-500 focus:ring-rose-500"
                                             : "border-stone-300 focus:border-orange-600 focus:ring-orange-600"
                                         }`}
@@ -250,7 +250,7 @@ export default function ApadrinarPage() {
                                     name="preferencia"
                                     type="text"
                                     placeholder="Ej. perro pequeño, gato adulto, sin preferencia..."
-                                    className="w-full rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
+                                    className="w-full rounded-md border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
                                 />
                             </div>
                         </div>
@@ -262,7 +262,7 @@ export default function ApadrinarPage() {
                             <textarea
                                 name="comentario"
                                 rows={3}
-                                className="w-full rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
+                                className="w-full rounded-md border border-stone-300 bg-stone-50 px-3 py-2 text-sm text-stone-900 outline-none focus:border-orange-600 focus:bg-white focus:ring-1 focus:ring-orange-600"
                                 placeholder="Si quieres, cuéntanos por qué decidiste apadrinar."
                             />
                         </div>
@@ -296,7 +296,7 @@ export default function ApadrinarPage() {
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="w-full max-w-md rounded-3xl bg-white border border-stone-200 shadow-xl p-6 space-y-4"
+                            className="w-full max-w-md rounded-md bg-white border border-stone-200 shadow-xl p-6 space-y-4"
                             initial={{ opacity: 0, scale: 0.9, y: 16 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 16 }}
